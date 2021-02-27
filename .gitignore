@@ -266,3 +266,8 @@ ghidra/p_code_extractor/lib/
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# gradle files
+PcodeExtractor/.gradle/*
+PcodeExtractor/gradle/*
+PcodeExtractor/.vscode/*

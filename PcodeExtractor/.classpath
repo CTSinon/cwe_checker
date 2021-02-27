@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry output="bin/main" kind="src" path="src/main/java">
+		<attributes>
+			<attribute name="gradle_scope" value="main"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry output="bin/main" kind="src" path="src/main/resources">
+		<attributes>
+			<attribute name="gradle_scope" value="main"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry output="bin/test" kind="src" path="src/test/java">
+		<attributes>
+			<attribute name="gradle_scope" value="test"/>
+			<attribute name="gradle_used_by_scope" value="test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.buildship.core.gradleclasspathcontainer"/>
+	<classpathentry kind="output" path="bin/default"/>
+	<classpathentry output="bin/main" kind="src" path="ghidra_scripts">
+		<attributes>
+			<attribute name="gradle_scope" value="main"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-15/"/>
+	<classpathentry sourcepath="/Users/ctsinon/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-all/1.3/47e033b7ab18c5dbd5fe29fc1bd5a40afe028818/hamcrest-all-1.3-sources.jar" kind="lib" path="/Users/ctsinon/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-all/1.3/63a21ebc981131004ad02e0434e799fd7f3a8d5a/hamcrest-all-1.3.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-all/1.3/3dc58dac8f7a74bb8c3c8cc579f2f773cc0fd9e9/hamcrest-all-1.3-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/.gradle/caches/modules-2/files-2.1/org.jmockit/jmockit/1.44/8b443caa1601beba8d64436b0791314e387f913c/jmockit-1.44-sources.jar" kind="lib" path="/Users/ctsinon/.gradle/caches/modules-2/files-2.1/org.jmockit/jmockit/1.44/1b41baa8fde0209ce90def969826532a23608df0/jmockit-1.44.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/.gradle/caches/modules-2/files-2.1/org.jmockit/jmockit/1.44/6211accdb4aeee6cef5c74c99af434f8fb6e3a5e/jmockit-1.44-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar" kind="lib" path="/Users/ctsinon/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/2973d150c0dc1fefe998f834810d68f278ea58ec/junit-4.12.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/941a8be4506c65f0a9001c08812fb7da1e505e21/junit-4.12-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/b19b5927c2c25b6c70f093767041e641ae0b1b35/jsr305-3.0.2-sources.jar" kind="lib" path="/Users/ctsinon/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/25ea2e8b0c338a877313bd4672d3fe056ea78f0d/jsr305-3.0.2.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/7cb5b4e91eb0741882c8fefb2fd0338eff9857c/jsr305-3.0.2-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/1dc37250fbc78e23a65a67fbbaf71d2e9cbc3c0b/hamcrest-core-1.3-sources.jar" kind="lib" path="/Users/ctsinon/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/ad09811315f1d4f5756986575b0ea16b99cd686f/hamcrest-core-1.3-javadoc.jar!/"/>
+			<attribute name="gradle_used_by_scope" value="test"/>
+			<attribute name="test" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/SoftwareModeling/lib/SoftwareModeling-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/SoftwareModeling/lib/isorelax-20050913.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/SoftwareModeling/lib/SoftwareModeling-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/SoftwareModeling/lib/xsdlib-20050913.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/SoftwareModeling/lib/SoftwareModeling-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/SoftwareModeling/lib/antlr-runtime-3.5.2.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/SoftwareModeling/lib/SoftwareModeling-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/SoftwareModeling/lib/msv-20050913.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/SoftwareModeling/lib/SoftwareModeling-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/SoftwareModeling/lib/SoftwareModeling.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/SoftwareModeling/lib/SoftwareModeling-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/SoftwareModeling/lib/relaxngDatatype-20050913.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/Graph/lib/Graph-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/Graph/lib/jung-algorithms-2.1.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/Graph/lib/Graph-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/Graph/lib/jung-visualization-2.1.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/Graph/lib/Graph-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/Graph/lib/jgrapht-io-1.5.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/Graph/lib/Graph-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/Graph/lib/jung-api-2.1.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/Graph/lib/Graph-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/Graph/lib/jgrapht-core-1.5.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/Graph/lib/Graph-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/Graph/lib/Graph.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/Graph/lib/Graph-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/Graph/lib/jung-graph-impl-2.1.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/FileSystem/lib/FileSystem-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/FileSystem/lib/ganymed-ssh2-262.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/FileSystem/lib/FileSystem-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/FileSystem/lib/FileSystem.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/Project/lib/Project-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/Project/lib/Project.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/Project/lib/Project-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/Project/lib/commons-compress-1.19.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/Docking/lib/Docking-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/Docking/lib/javahelp-2.0.05.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/Docking/lib/Docking-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/Docking/lib/Docking.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/Docking/lib/Docking-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/Docking/lib/timingframework-1.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/DB/lib/DB-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/DB/lib/DB.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/Generic/lib/Generic-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/Generic/lib/log4j-core-2.12.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/Generic/lib/Generic-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/Generic/lib/commons-lang3-3.9.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/Generic/lib/Generic-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/Generic/lib/guava-19.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/Generic/lib/Generic-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/Generic/lib/gson-2.8.6.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/Generic/lib/Generic-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/Generic/lib/jdom-legacy-1.1.3.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/Generic/lib/Generic-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/Generic/lib/cglib-nodep-2.2.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/Generic/lib/Generic-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/Generic/lib/log4j-api-2.12.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/Generic/lib/Generic-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/Generic/lib/commons-collections4-4.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/Generic/lib/Generic-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/Generic/lib/Generic.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/Generic/lib/Generic-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/Generic/lib/commons-io-2.6.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/Generic/lib/Generic-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/Generic/lib/commons-text-1.6.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/Help/lib/Help-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/Help/lib/Help.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Framework/Utility/lib/Utility-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Framework/Utility/lib/Utility.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/FileFormats/lib/FileFormats-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/FileFormats/lib/asm-debug-all-4.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/FileFormats/lib/FileFormats-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/FileFormats/lib/util-1.4.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/FileFormats/lib/FileFormats-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/FileFormats/lib/dex-ir-2.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/FileFormats/lib/FileFormats-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/FileFormats/lib/dexlib-1.4.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/FileFormats/lib/FileFormats-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/FileFormats/lib/sevenzipjbinding-all-platforms-16.02-2.01.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/FileFormats/lib/FileFormats-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/FileFormats/lib/sevenzipjbinding-16.02-2.01.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/FileFormats/lib/FileFormats-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/FileFormats/lib/FileFormats.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/FileFormats/lib/FileFormats-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/FileFormats/lib/baksmali-1.4.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/FileFormats/lib/FileFormats-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/FileFormats/lib/dex-translator-2.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/FileFormats/lib/FileFormats-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/FileFormats/lib/AXMLPrinter2.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/FileFormats/lib/FileFormats-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/FileFormats/lib/dex-reader-api-2.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/FileFormats/lib/FileFormats-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/FileFormats/lib/dex-reader-2.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/FunctionID/lib/FunctionID-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/FunctionID/lib/FunctionID.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/lib/GhidraServer-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/lib/GhidraServer.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/wrapperApp.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/core/commons/commons-logging-1.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/core/commons/commons-cli-1.3.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/core/commons/commons-configuration2-2.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/core/commons/commons-vfs2-2.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/core/commons/commons-collections-3.2.2.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/core/commons/commons-lang-2.4.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/core/commons/commons-io-1.3.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/core/commons/commons-lang3-3.4.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/core/netty/netty-all-4.0.47.Final.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/core/yajsw/ahessian.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/core/jna/jna-4.5.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/core/jna/jna-platform-4.5.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/extended/keystore/keystore.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/extended/vfs-webdav/slf4j-api-1.5.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/extended/vfs-webdav/jackrabbit-webdav-1.5.6.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/extended/vfs-webdav/xercesImpl.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/extended/vfs-webdav/slf4j-jdk14-1.5.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/extended/commons/commons-net-1.4.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/extended/commons/commons-codec-1.3.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/extended/commons/commons-net-3.2.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/extended/commons/commons-httpclient-3.0.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/extended/glazedlists/glazedlists-1.10.0_java16.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/extended/glazedlists/commons-beanutils-1.9.3.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/extended/vfs-dbx/jackson-core-2.2.4.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/extended/vfs-dbx/vfs-dbx-00.02.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/extended/vfs-dbx/dropbox-core-sdk-1.7.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/extended/regex/automaton-1.11.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/extended/velocity/velocity-1.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/extended/abeille/formsrt.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/extended/jgoodies/forms-1.2.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/extended/yajsw/srvmgr.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/extended/yajsw/hessian4.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/extended/groovy/groovy-patch.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/extended/groovy/groovy-all-2.4.11.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/extended/cron/prevayler-core-2.6.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/extended/cron/prevayler-factory-2.6.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/extended/cron/joda-time-2.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/lib/extended/cron/yacron4j-00.03.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GhidraServer/data/yajsw-stable-12.12/wrapper.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/Python/lib/Python-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/Python/lib/Python.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/Python/lib/Python-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/Python/lib/jython-standalone-2.7.2.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/GnuDemangler/lib/GnuDemangler-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GnuDemangler/lib/GnuDemangler.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/MicrosoftDmang/lib/MicrosoftDmang-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/MicrosoftDmang/lib/MicrosoftDmang.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/ByteViewer/lib/ByteViewer-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/ByteViewer/lib/ByteViewer.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/SourceCodeLookup/lib/SourceCodeLookup-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/SourceCodeLookup/lib/SourceCodeLookup.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/VersionTracking/lib/VersionTracking-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/VersionTracking/lib/VersionTracking.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/Decompiler/lib/Decompiler-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/Decompiler/lib/Decompiler.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/FunctionGraphDecompilerExtension/lib/FunctionGraphDecompilerExtension-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/FunctionGraphDecompilerExtension/lib/FunctionGraphDecompilerExtension.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/Recognizers/lib/Recognizers-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/Recognizers/lib/Recognizers.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/DecompilerDependent/lib/DecompilerDependent-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/DecompilerDependent/lib/DecompilerDependent.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/FunctionGraph/lib/FunctionGraph-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/FunctionGraph/lib/FunctionGraph.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/MicrosoftDemangler/lib/MicrosoftDemangler-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/MicrosoftDemangler/lib/MicrosoftDemangler.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/MicrosoftCodeAnalyzer/lib/MicrosoftCodeAnalyzer-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/MicrosoftCodeAnalyzer/lib/MicrosoftCodeAnalyzer.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/BytePatterns/lib/BytePatterns-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/BytePatterns/lib/BytePatterns.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/DebugUtils/lib/DebugUtils-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/DebugUtils/lib/DebugUtils.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/ProgramGraph/lib/ProgramGraph-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/ProgramGraph/lib/ProgramGraph.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/PDB/lib/PDB-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/PDB/lib/PDB.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/GraphFunctionCalls/lib/GraphFunctionCalls-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GraphFunctionCalls/lib/GraphFunctionCalls.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/Base/lib/Base-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/Base/lib/phidias-0.3.7.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/Base/lib/Base-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/Base/lib/slf4j-api-1.7.25.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/Base/lib/Base-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/Base/lib/org.apache.felix.framework-6.0.3.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/Base/lib/Base-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/Base/lib/Base.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/Base/lib/Base-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/Base/lib/biz.aQute.bndlib-5.1.2.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/Base/lib/Base-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/Base/lib/slf4j-nop-1.7.25.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/GraphServices/lib/GraphServices-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GraphServices/lib/slf4j-api-1.7.25.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/GraphServices/lib/GraphServices-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GraphServices/lib/jungrapht-layout-1.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/GraphServices/lib/GraphServices-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GraphServices/lib/jheaps-0.13.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/GraphServices/lib/GraphServices-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GraphServices/lib/jungrapht-visualization-1.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/GraphServices/lib/GraphServices-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GraphServices/lib/GraphServices.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/GraphServices/lib/GraphServices-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/GraphServices/lib/slf4j-nop-1.7.25.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Features/ProgramDiff/lib/ProgramDiff-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Features/ProgramDiff/lib/ProgramDiff.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Configurations/Public_Release/lib/Public_Release.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Processors/V850/lib/V850.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Processors/PowerPC/lib/PowerPC-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Processors/PowerPC/lib/PowerPC.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Processors/HCS12/lib/HCS12-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Processors/HCS12/lib/HCS12.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Processors/Dalvik/lib/Dalvik-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Processors/Dalvik/lib/Dalvik.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Processors/JVM/lib/JVM-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Processors/JVM/lib/JVM.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Processors/MIPS/lib/MIPS-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Processors/MIPS/lib/MIPS.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Processors/tricore/lib/tricore-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Processors/tricore/lib/tricore.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Processors/PIC/lib/PIC-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Processors/PIC/lib/PIC.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Processors/SuperH4/lib/SuperH4.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Processors/x86/lib/x86-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Processors/x86/lib/x86.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Processors/8051/lib/8051.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Processors/68000/lib/68000-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Processors/68000/lib/68000.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Processors/ARM/lib/ARM-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Processors/ARM/lib/ARM.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Processors/RISCV/lib/RISCV-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Processors/RISCV/lib/RISCV.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Processors/DATA/lib/DATA-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Processors/DATA/lib/DATA.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Processors/AARCH64/lib/AARCH64-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Processors/AARCH64/lib/AARCH64.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Processors/Sparc/lib/Sparc-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Processors/Sparc/lib/Sparc.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="/Users/ctsinon/ghidra/Ghidra/Processors/Atmel/lib/Atmel-src.zip" kind="lib" path="/Users/ctsinon/ghidra/Ghidra/Processors/Atmel/lib/Atmel.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+			<attribute name="javadoc_location" value="jar:file:/Users/ctsinon/ghidra/docs/GhidraAPI_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+</classpath>

@@ -52,7 +52,7 @@ public class PcodeExtractor extends GhidraScript {
         Term<Program> program = TermCreator.createProgramTerm();
         Project project = createProject(program);
         program = iterateFunctions(simpleBM, listing, program);
-        program.getTerm().setExternSymbols(new ArrayList<ExternSymbol>(ExternSymbolCreator.externalSymbolMap.values()));
+        program.getTerm().setExternSymbols(new ArrayList<>(ExternSymbolCreator.externalSymbolMap.values()));
 
         String jsonPath = getScriptArgs()[0];
         Serializer ser = new Serializer(project, jsonPath);
@@ -101,7 +101,7 @@ public class PcodeExtractor extends GhidraScript {
      * Iterates over all blocks and calls the instruction iterator to add def and jmp terms to each block.
      */
     protected ArrayList<Term<Blk>> iterateBlocks(Term<Sub> currentSub, SimpleBlockModel simpleBM, Listing listing) {
-        ArrayList<Term<Blk>> blockTerms = new ArrayList<Term<Blk>>();
+        ArrayList<Term<Blk>> blockTerms = new ArrayList<>();
         try {
             CodeBlockIterator blockIter = simpleBM.getCodeBlocksContaining(currentSub.getTerm().getAddresses(), getMonitor());
             while(blockIter.hasNext()) {
@@ -112,7 +112,7 @@ public class PcodeExtractor extends GhidraScript {
                 blockTerms.addAll(newBlockTerms);
             }
         } catch (CancelledException e) {
-            System.out.printf("Could not retrieve all basic blocks comprised by function: %s\n", currentSub.getTerm().getName());
+            System.out.printf("Could not retrieve all basic blocks comprised by function: %s%n", currentSub.getTerm().getName());
         }
 
         return blockTerms;
@@ -166,7 +166,7 @@ public class PcodeExtractor extends GhidraScript {
                 String destAddr = destinations.next().getDestinationBlock().getFirstStartAddress().toString();
                 gotoTid.setId(String.format("blk_%s", destAddr));
                 gotoTid.setAddress(destAddr);
-                PcodeBlockData.blocks.get(0).getTerm().addJmp(new Term<Jmp>(jmpTid, new Jmp(ExecutionType.JmpType.GOTO, "BRANCH", new Label((Tid) gotoTid), 0)));
+                PcodeBlockData.blocks.get(0).getTerm().addJmp(new Term<>(jmpTid, new Jmp(ExecutionType.JmpType.GOTO, "BRANCH", new Label(gotoTid), 0)));
             }
         } catch (CancelledException e) {
             System.out.printf("Could not retrieve destinations for block at: %s\n", codeBlock.getFirstStartAddress().toString());
@@ -247,10 +247,10 @@ public class PcodeExtractor extends GhidraScript {
         project.setStackPointerRegister(stackPointerVar);
         project.setCpuArch(HelperFunctions.getCpuArchitecture());
         try {
-            HashMap<String, RegisterConvention> conventions = new HashMap<String, RegisterConvention>();
+            HashMap<String, RegisterConvention> conventions = new HashMap<>();
             ParseCspecContent.parseSpecs(currentProgram, conventions);
             addParameterRegister(conventions);
-            project.setRegisterConvention(new ArrayList<RegisterConvention>(conventions.values()));
+            project.setRegisterConvention(new ArrayList<>(conventions.values()));
         } catch (FileNotFoundException e) {
             System.out.println(e);
         }
