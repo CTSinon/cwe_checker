@@ -169,7 +169,7 @@ public class PcodeExtractor extends GhidraScript {
                 PcodeBlockData.blocks.get(0).getTerm().addJmp(new Term<>(jmpTid, new Jmp(ExecutionType.JmpType.GOTO, "BRANCH", new Label(gotoTid), 0)));
             }
         } catch (CancelledException e) {
-            System.out.printf("Could not retrieve destinations for block at: %s\n", codeBlock.getFirstStartAddress().toString());
+            System.out.printf("Could not retrieve destinations for block at: %s%n", codeBlock.getFirstStartAddress().toString());
         }
     }
 
