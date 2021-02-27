@@ -3,6 +3,7 @@ package internal;
 import term.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import bil.ExecutionType;
@@ -13,15 +14,8 @@ import ghidra.util.exception.CancelledException;
 
 public final class JumpProcessing {
 
-    public static List<String> jumps = new ArrayList<String>() {{
-        add("BRANCH");
-        add("CBRANCH");
-        add("BRANCHIND");
-        add("CALL");
-        add("CALLIND");
-        add("CALLOTHER");
-        add("RETURN");
-    }};
+    public static final List<String> jumps = 
+        new ArrayList<>(Arrays.asList("BRANCH", "CBRANCH", "BRANCHIND", "CALL", "CALLIND", "CALLOTHER", "RETURN"));
 
     // private constructor for non-instantiable classes
     private JumpProcessing() {
@@ -134,7 +128,7 @@ public final class JumpProcessing {
      * 15.      ...                                         ...
      */
     private static void handleIntraInstructionJump(Blk currentBlock) {
-        if(PcodeBlockData.instructionIndex > 0 && !(currentBlock.getDefs().size() == 0 && currentBlock.getJmps().size() == 0)) {
+        if(PcodeBlockData.instructionIndex > 0 && !(currentBlock.getDefs().isEmpty() && currentBlock.getJmps().isEmpty())) {
             addBranchToCurrentBlock(currentBlock, PcodeBlockData.instruction.getFallFrom().toString(), PcodeBlockData.instruction.getAddress().toString());
             createNewBlockForIntraInstructionJump();
         } else {
@@ -195,7 +189,7 @@ public final class JumpProcessing {
     public static void fixControlFlowWhenIntraInstructionJumpOccured(Boolean intraInstructionJumpOccured) {
         // A block is split when a Pcode Jump Instruction occurs in the PcodeBlock. 
         // A jump is added to the end of the split block to the pcode block of the next assembly instruction
-        if(intraInstructionJumpOccured) {
+        if(Boolean.TRUE.equals(intraInstructionJumpOccured)) {
             Term<Blk> lastBlock = PcodeBlockData.blocks.get(PcodeBlockData.blocks.size() - 1);
             addMissingJumpAfterInstructionSplit(lastBlock);
         }
@@ -224,7 +218,7 @@ public final class JumpProcessing {
     private static void createNewBlockForIntraInstructionJump(){
         Term<Blk> newBlock;
         // If an assembly instruction's pcode block is split into multiple blocks, the blocks' TIDs have to be distinguished by pcode index as they share the same instruction address
-        if(PcodeBlockData.temporaryDefStorage.size() > 0) {
+        if(!PcodeBlockData.temporaryDefStorage.isEmpty()) {
             int nextBlockStartIndex = PcodeBlockData.temporaryDefStorage.get(0).getTerm().getPcodeIndex();
             if(nextBlockStartIndex == 0) {
                 newBlock = TermCreator.createBlkTerm(PcodeBlockData.instruction.getAddress().toString(), null);
@@ -251,12 +245,12 @@ public final class JumpProcessing {
      */
     public static void addBranchToCurrentBlock(Blk currentBlock, String jumpSiteAddress, String gotoAddress) {
         int artificialJmpIndex = 1;
-        if(currentBlock.getDefs().size() > 0) {
+        if(!currentBlock.getDefs().isEmpty()) {
             artificialJmpIndex = currentBlock.getDefs().get(currentBlock.getDefs().size() - 1).getTerm().getPcodeIndex() + 1;
         }
         Tid jmpTid = new Tid(String.format("instr_%s_%s", jumpSiteAddress, artificialJmpIndex), jumpSiteAddress);
         Tid gotoTid = new Tid(String.format("blk_%s", gotoAddress), gotoAddress);
-        currentBlock.addJmp(new Term<Jmp>(jmpTid, new Jmp(ExecutionType.JmpType.GOTO, "BRANCH", new Label((Tid) gotoTid), artificialJmpIndex)));
+        currentBlock.addJmp(new Term<>(jmpTid, new Jmp(ExecutionType.JmpType.GOTO, "BRANCH", new Label(gotoTid), artificialJmpIndex)));
     }
 
 
@@ -268,7 +262,7 @@ public final class JumpProcessing {
      */
     private static void redirectCallReturn(Term<Blk> currentBlock) {
         Tid jmpTid = new Tid(String.format("instr_%s_%s_r", PcodeBlockData.instruction.getAddress().toString(), 0), PcodeBlockData.instruction.getAddress().toString());
-        Term<Jmp> ret = new Term<Jmp>(jmpTid, new Jmp(ExecutionType.JmpType.RETURN, PcodeBlockData.pcodeOp.getMnemonic(), TermCreator.createLabel(null), 0));
+        Term<Jmp> ret = new Term<>(jmpTid, new Jmp(ExecutionType.JmpType.RETURN, PcodeBlockData.pcodeOp.getMnemonic(), TermCreator.createLabel(null), 0));
         currentBlock.getTerm().addJmp(ret);
     } 
 
@@ -282,7 +276,7 @@ public final class JumpProcessing {
      * destination address of the current code block, if available, to create an artificial jump
      */
     public static void handlePossibleDefinitionAtEndOfBlock(Term<Blk> lastBlockTerm, CodeBlock currentBlock) {
-        if(HelperFunctions.lastInstructionIsDef(lastBlockTerm)) {
+        if(Boolean.TRUE.equals(HelperFunctions.lastInstructionIsDef(lastBlockTerm))) {
             String destinationAddress = getGotoAddressForDestination(currentBlock);
             if(destinationAddress != null) {
                 String instrAddress = lastBlockTerm.getTerm().getDefs().get(lastBlockTerm.getTerm().getDefs().size()-1).getTid().getAddress();
