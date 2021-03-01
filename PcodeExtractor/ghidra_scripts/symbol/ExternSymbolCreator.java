@@ -21,7 +21,7 @@ import ghidra.program.model.symbol.SymbolTable;
 
 public class ExternSymbolCreator {
 
-    public static HashMap<String, ExternSymbol> externalSymbolMap = new HashMap<>();
+    public static Map<String, ExternSymbol> externalSymbolMap = new HashMap<>();
 
     // private constructor for non-instantiable classes
     private ExternSymbolCreator() {
@@ -78,7 +78,7 @@ public class ExternSymbolCreator {
      * 
      * Either adds a function to a given symbol name or creates a new entry in the symbol map
      */
-    public static void addToSymbolMap(HashMap<String, ArrayList<Function>> symbolMap, Function func) {
+    public static void addToSymbolMap(Map<String, ArrayList<Function>> symbolMap, Function func) {
         if(symbolMap.containsKey(func.getName())) {
             symbolMap.get(func.getName()).add(func);
         } else {
