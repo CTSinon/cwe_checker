@@ -42,7 +42,14 @@ public class PcodeExtractor extends GhidraScript {
         HelperFunctions.monitor = getMonitor();
         HelperFunctions.ghidraProgram = currentProgram;
         HelperFunctions.funcMan = currentProgram.getFunctionManager();
+        // varnode is an abstraction of "variable", all operations of P-code happen on varnode
         HelperFunctions.context = new VarnodeContext(currentProgram, currentProgram.getProgramContext(), currentProgram.getProgramContext());
+        /**
+         * A CodeBlock in this model consists of contiguous code that has zero or more nonflow fallthrough 
+         * instructions followed by a single flow instruction. Each block may or may not have a label at 
+         * the first instruction, but may not have a label at any other instruction contained in the block.
+         * -- https://ghidra.re/ghidra_docs/api/ghidra/program/model/block/SimpleBlockModel.html
+         */ 
         SimpleBlockModel simpleBM = new SimpleBlockModel(currentProgram);
         Listing listing = currentProgram.getListing();
 

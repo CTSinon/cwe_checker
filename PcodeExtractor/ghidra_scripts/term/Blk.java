@@ -1,38 +1,39 @@
 package term;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
 
 public class Blk {
     @SerializedName("defs")
-    private ArrayList<Term<Def>> defs;
+    private List<Term<Def>> defs;
     @SerializedName("jmps")
-    private ArrayList<Term<Jmp>> jmps;
+    private List<Term<Jmp>> jmps;
 
     public Blk() {
-        this.setDefs(new ArrayList<Term<Def>>());
-        this.setJmps(new ArrayList<Term<Jmp>>());
+        this.setDefs(new ArrayList<>());
+        this.setJmps(new ArrayList<>());
     }
 
-    public Blk(ArrayList<Term<Def>> defs, ArrayList<Term<Jmp>> jmps) {
+    public Blk(List<Term<Def>> defs, List<Term<Jmp>> jmps) {
         this.setDefs(defs);
         this.setJmps(jmps);
     }
 
-    public ArrayList<Term<Def>> getDefs() {
+    public List<Term<Def>> getDefs() {
         return defs;
     }
 
-    public void setDefs(ArrayList<Term<Def>> defs) {
+    public void setDefs(List<Term<Def>> defs) {
         this.defs = defs;
     }
 
-    public ArrayList<Term<Jmp>> getJmps() {
+    public List<Term<Jmp>> getJmps() {
         return jmps;
     }
 
-    public void setJmps(ArrayList<Term<Jmp>> jmps) {
+    public void setJmps(List<Term<Jmp>> jmps) {
         this.jmps = jmps;
     }
 
@@ -44,11 +45,11 @@ public class Blk {
         this.jmps.add(jmp);
     }
 
-    public void addMultipleDefs(ArrayList<Term<Def>> defs) {
+    public void addMultipleDefs(List<Term<Def>> defs) {
         this.defs.addAll(defs);
     }
 
-    public void addMultipleJumps(ArrayList<Term<Jmp>> jmps) {
+    public void addMultipleJumps(List<Term<Jmp>> jmps) {
         this.jmps.addAll(jmps);
     }
 

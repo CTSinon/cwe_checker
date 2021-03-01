@@ -14,7 +14,7 @@ import ghidra.util.exception.CancelledException;
 
 public final class JumpProcessing {
 
-    public static final List<String> jumps = 
+    public static List<String> jumps = 
         new ArrayList<>(Arrays.asList("BRANCH", "CBRANCH", "BRANCHIND", "CALL", "CALLIND", "CALLOTHER", "RETURN"));
 
     // private constructor for non-instantiable classes

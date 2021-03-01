@@ -30,7 +30,7 @@ public class TermCreator {
     public static Term<Program> createProgramTerm() {
         Tid progTid = new Tid(String.format("prog_%s", HelperFunctions.ghidraProgram.getMinAddress().toString()), HelperFunctions.ghidraProgram.getMinAddress().toString());
         String imageBase = HelperFunctions.ghidraProgram.getImageBase().toString();
-        return new Term<Program>(progTid, new Program(new ArrayList<Term<Sub>>(), HelperFunctions.addEntryPoints(symTab), imageBase));
+        return new Term<>(progTid, new Program(new ArrayList<>(), HelperFunctions.addEntryPoints(symTab), imageBase));
     }
 
 
@@ -71,10 +71,10 @@ public class TermCreator {
      * Creates a Jmp Term with an unique TID consisting of the prefix jmp, its instruction address and the index of the pcode in the block.
      * Depending on the instruction, it either has a goto label, a goto label and a condition or a call object.
      */
-    public static ArrayList<Term<Jmp>> createJmpTerm(Boolean intraJump) {
+    public static List<Term<Jmp>> createJmpTerm(Boolean intraJump) {
         String instrAddr = PcodeBlockData.instruction.getAddress().toString();
         Tid jmpTid = new Tid(String.format("instr_%s_%s", instrAddr, PcodeBlockData.pcodeIndex), instrAddr);
-        ArrayList<Term<Jmp>> jumps = new ArrayList<Term<Jmp>>();
+        ArrayList<Term<Jmp>> jumps = new ArrayList<>();
         int opcode = PcodeBlockData.pcodeOp.getOpcode();
         String mnemonic = PcodeBlockData.pcodeOp.getMnemonic();
 
@@ -97,6 +97,8 @@ public class TermCreator {
             case PcodeOp.RETURN:
                 jumps.add(new Term<Jmp>(jmpTid, new Jmp(ExecutionType.JmpType.RETURN, mnemonic, createLabel(null), PcodeBlockData.pcodeIndex)));
                 break;
+            default:
+                break;
         }
 
         return jumps;
@@ -115,19 +117,19 @@ public class TermCreator {
      * the start pcode index of the next block.
      */
     private static ArrayList<Term<Jmp>> handleConditionalBranches(Tid conditionalTid, Boolean intraJump) {
-        ArrayList<Term<Jmp>> branches = new ArrayList<Term<Jmp>>();
-        String branchSiteAddress = new String(conditionalTid.getAddress());
+        ArrayList<Term<Jmp>> branches = new ArrayList<>();
+        String branchSiteAddress = conditionalTid.getAddress();
         Tid branchTid = new Tid(String.format("instr_%s_%s", branchSiteAddress, PcodeBlockData.pcodeIndex + 1), branchSiteAddress);
-        Tid targetTid = new Tid();
+        Tid targetTid;
 
-        if(intraJump) {
+        if (Boolean.TRUE.equals(intraJump)) {
             targetTid = new Tid(String.format("blk_%s_%s", branchSiteAddress, PcodeBlockData.pcodeIndex + 2), branchSiteAddress);
         } else {
             targetTid = new Tid(String.format("blk_%s", PcodeBlockData.instruction.getFallThrough().toString()), PcodeBlockData.instruction.getFallThrough().toString());
         }
 
-        branches.add(new Term<Jmp>(conditionalTid, new Jmp(ExecutionType.JmpType.GOTO, PcodeBlockData.pcodeOp.getMnemonic(), TermCreator.createLabel(null), TermCreator.createVariable(PcodeBlockData.pcodeOp.getInput(1)), PcodeBlockData.pcodeIndex)));
-        branches.add(new Term<Jmp>(branchTid, new Jmp(ExecutionType.JmpType.GOTO, "BRANCH", new Label(targetTid), PcodeBlockData.pcodeIndex + 1)));
+        branches.add(new Term<>(conditionalTid, new Jmp(ExecutionType.JmpType.GOTO, PcodeBlockData.pcodeOp.getMnemonic(), TermCreator.createLabel(null), TermCreator.createVariable(PcodeBlockData.pcodeOp.getInput(1)), PcodeBlockData.pcodeIndex)));
+        branches.add(new Term<>(branchTid, new Jmp(ExecutionType.JmpType.GOTO, "BRANCH", new Label(targetTid), PcodeBlockData.pcodeIndex + 1)));
 
         return branches;
     }

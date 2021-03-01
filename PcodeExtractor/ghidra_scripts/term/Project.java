@@ -4,7 +4,7 @@ import bil.RegisterProperties;
 import bil.Variable;
 import internal.RegisterConvention;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -14,16 +14,16 @@ public class Project {
     @SerializedName("stack_pointer_register")
     private Variable stackPointerRegister;
     @SerializedName("register_properties")
-    private ArrayList<RegisterProperties> registerProperties;
+    private List<RegisterProperties> registerProperties;
     @SerializedName("cpu_architecture")
     private String cpuArch;
     @SerializedName("register_calling_convention")
-    private ArrayList<RegisterConvention> conventions;
+    private List<RegisterConvention> conventions;
 
     public Project() {
     }
 
-    public Project(Term<Program> program, String cpuArch, Variable stackPointerRegister, ArrayList<RegisterConvention> conventions) {
+    public Project(Term<Program> program, String cpuArch, Variable stackPointerRegister, List<RegisterConvention> conventions) {
         this.setProgram(program);
         this.setCpuArch(cpuArch);
         this.setStackPointerRegister(stackPointerRegister);
@@ -54,19 +54,19 @@ public class Project {
         this.cpuArch = cpuArch;
     }
 
-    public ArrayList<RegisterConvention> getRegisterConvention() {
+    public List<RegisterConvention> getRegisterConvention() {
         return conventions;
     }
 
-    public void setRegisterConvention(ArrayList<RegisterConvention> conventions) {
+    public void setRegisterConvention(List<RegisterConvention> conventions) {
         this.conventions = conventions;
     }
 
-    public ArrayList<RegisterProperties> getRegisterProperties() {
+    public List<RegisterProperties> getRegisterProperties() {
         return registerProperties;
     }
 
-    public void setRegisterProperties(ArrayList<RegisterProperties> registerProperties) {
+    public void setRegisterProperties(List<RegisterProperties> registerProperties) {
         this.registerProperties = registerProperties;
     }
 }

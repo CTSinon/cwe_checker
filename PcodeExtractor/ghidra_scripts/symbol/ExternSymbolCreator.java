@@ -2,6 +2,7 @@ package symbol;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import bil.Expression;
@@ -20,7 +21,7 @@ import ghidra.program.model.symbol.SymbolTable;
 
 public class ExternSymbolCreator {
 
-    public static HashMap<String, ExternSymbol> externalSymbolMap = new HashMap<String, ExternSymbol>();
+    public static HashMap<String, ExternSymbol> externalSymbolMap = new HashMap<>();
 
     // private constructor for non-instantiable classes
     private ExternSymbolCreator() {
@@ -34,11 +35,11 @@ public class ExternSymbolCreator {
      * Creates a map of external symbols to add to the program term
      */
     public static void createExternalSymbolMap(SymbolTable symTab) {
-        HashMap<String, ArrayList<Function>> symbolMap = new HashMap<String, ArrayList<Function>>();
+        HashMap<String, ArrayList<Function>> symbolMap = new HashMap<>();
         HelperFunctions.funcMan.getExternalFunctions().forEach(func -> {
-            ArrayList<Function> thunkFuncs = new ArrayList<Function>();
+            ArrayList<Function> thunkFuncs = new ArrayList<>();
             getThunkFunctions(func, thunkFuncs);
-            if(thunkFuncs.size() > 0) {
+            if(!thunkFuncs.isEmpty()) {
                 for(Function thunk : thunkFuncs) {
                     addToSymbolMap(symbolMap, thunk);
                 }
@@ -58,7 +59,7 @@ public class ExternSymbolCreator {
      * 
      * Recursively find thunk functions in symbol chain
      */
-    public static void getThunkFunctions(Function func, ArrayList<Function> thunkFuncs) {
+    public static void getThunkFunctions(Function func, List<Function> thunkFuncs) {
         Address[] thunks = func.getFunctionThunkAddresses();
         if(thunks != null) {
             for(Address thunkAddr : thunks) {

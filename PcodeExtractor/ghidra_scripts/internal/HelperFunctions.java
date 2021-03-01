@@ -2,6 +2,8 @@ package internal;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -26,7 +28,7 @@ public final class HelperFunctions {
     public static VarnodeContext context;
     public static ghidra.program.model.listing.Program ghidraProgram;
     public static FunctionManager funcMan;
-    public static HashMap<String, Tid> functionEntryPoints = new HashMap<String, Tid>();
+    public static Map<String, Tid> functionEntryPoints = new HashMap<>();
     public static TaskMonitor monitor;
 
     private HelperFunctions() {
@@ -183,13 +185,10 @@ public final class HelperFunctions {
      * Checks whether the current block term ends on a definition
      */
     public static Boolean lastInstructionIsDef(Term<Blk> block) {
-        ArrayList<Term<Jmp>> jumps = block.getTerm().getJmps();
-        ArrayList<Term<Def>> defs = block.getTerm().getDefs();
+        List<Term<Jmp>> jumps = block.getTerm().getJmps();
+        List<Term<Def>> defs = block.getTerm().getDefs();
 
-        if(defs.size() > 0 && jumps.size() == 0) {
-            return true;
-        }
-        return false;
+        return (!defs.isEmpty() && jumps.isEmpty());
     }
 
 
@@ -200,8 +199,8 @@ public final class HelperFunctions {
      * 
      * Creates a list of program entry points to add to the program term
      */
-    public static ArrayList<Tid> addEntryPoints(SymbolTable symTab) {
-        ArrayList<Tid> entryTids = new ArrayList<Tid>();
+    public static List<Tid> addEntryPoints(SymbolTable symTab) {
+        ArrayList<Tid> entryTids = new ArrayList<>();
         AddressIterator entryPoints = symTab.getExternalEntryPointIterator();
         while (entryPoints.hasNext()) {
             Address entry = entryPoints.next();
@@ -232,8 +231,8 @@ public final class HelperFunctions {
      * 
      * @return list of register properties
      */
-    public static ArrayList<RegisterProperties> getRegisterList() {
-        ArrayList<RegisterProperties> regProps = new ArrayList<RegisterProperties>();
+    public static List<RegisterProperties> getRegisterList() {
+        ArrayList<RegisterProperties> regProps = new ArrayList<>();
         Language language = ghidraProgram.getLanguage();
         int archSizeInBytes = (int)(language.getLanguageDescription().getSize() / 8);
         for(Register reg : language.getRegisters()) {
