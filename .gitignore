@@ -271,3 +271,7 @@ hs_err_pid*
 PcodeExtractor/.gradle/*
 PcodeExtractor/gradle/*
 PcodeExtractor/.vscode/*
+
+# playground
+/playground/
+/test/
