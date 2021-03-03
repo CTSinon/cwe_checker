@@ -88,10 +88,12 @@ pub fn check_cwe(
             symbol_map.get(source.as_str()),
             symbol_map.get(sink.as_str()),
         ) {
+            println!("{}, {}", source, sink);
             for edge in graph.edge_references() {
                 if let Edge::ExternCallStub(jmp) = edge.weight() {
                     if let Jmp::Call { target, .. } = &jmp.term {
                         if target == source_tid {
+                            println!("{}", target);
                             if let Some(sink_callsite) = is_sink_call_reachable_from_source_call(
                                 graph,
                                 edge.target(),

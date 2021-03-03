@@ -1,7 +1,7 @@
 use cwe_checker_lib::analysis::graph;
 use cwe_checker_lib::utils::binary::RuntimeMemoryImage;
 use cwe_checker_lib::utils::log::print_all_messages;
-use cwe_checker_lib::utils::{get_ghidra_plugin_path, read_config_file};
+use cwe_checker_lib::utils::read_config_file;
 use cwe_checker_lib::AnalysisResults;
 use cwe_checker_lib::{intermediate_representation::Project, utils::log::LogMessage};
 use nix::{sys::stat, unistd};
@@ -201,9 +201,7 @@ fn filter_modules_for_partial_run(
 
 /// Execute the `p_code_extractor` plugin in ghidra and parse its output into the `Project` data structure.
 fn get_project_from_ghidra(file_path: &Path, binary: &[u8], quiet_flag: bool) -> Project {
-    let ghidra_path: std::path::PathBuf =
-        serde_json::from_value(read_config_file("ghidra.json")["ghidra_path"].clone())
-            .expect("Path to Ghidra not configured.");
+    let ghidra_path: std::path::PathBuf = PathBuf::from(env!("GHIDRA_INSTALL_DIR"));
     let headless_path = ghidra_path.join("support/analyzeHeadless");
 
     // Find the correct paths for temporary files.
@@ -232,7 +230,6 @@ fn get_project_from_ghidra(file_path: &Path, binary: &[u8], quiet_flag: bool) ->
         .expect("Invalid file name")
         .to_string_lossy()
         .to_string();
-    let ghidra_plugin_path = get_ghidra_plugin_path("p_code_extractor");
 
     // Create a unique name for the pipe
     let fifo_path = tmp_folder.join(format!("pcode_{}.pipe", timestamp_suffix));
@@ -255,10 +252,8 @@ fn get_project_from_ghidra(file_path: &Path, binary: &[u8], quiet_flag: bool) ->
             .arg("-import") // Import a file into the Ghidra project
             .arg(thread_file_path) // File import path
             .arg("-postScript") // Execute a script after standard analysis by Ghidra finished
-            .arg(ghidra_plugin_path.join("PcodeExtractor.java")) // Path to the PcodeExtractor.java
+            .arg("PcodeExtractor.java") // Path to the PcodeExtractor.java
             .arg(thread_fifo_path) // The path to the named pipe (fifo)
-            .arg("-scriptPath") // Add a folder containing additional script files to the Ghidra script file search paths
-            .arg(ghidra_plugin_path) // Path to the folder containing the PcodeExtractor.java (so that the other java files can be found.)
             .arg("-deleteProject") // Delete the temporary project after the script finished
             .arg("-analysisTimeoutPerFile") // Set a timeout for how long the standard analysis can run before getting aborted
             .arg("3600") // Timeout of one hour (=3600 seconds) // TODO: The post-script can detect that the timeout fired and react accordingly.

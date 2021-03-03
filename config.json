@@ -79,7 +79,7 @@
                 "open"
             ],
             [
-                "__xstat",
+                "stat",
                 "open"
             ]
         ]
