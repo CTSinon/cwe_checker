@@ -195,13 +195,17 @@ impl Expression {
 
         if let Some(output_value) = output {
             if let Some(register) = register_map.get(&output_value.name) {
+                // if the output register of current instruction is not a base register
                 if *register.register != *register.base_register {
+                    // replace the output register of current instruction with the corresponding base register
                     output_sub_register = Some(register);
                     output_base_register = register_map.get(&register.base_register);
                     output_value.name = register.base_register.clone();
                     output_value.size = output_base_register.unwrap().size;
                     output_base_size = Some(output_value.size);
 
+                    // check if the next instruction is INT_ZEXT and op is the output of current instruction
+                    // if so, return the tid of the next instruction
                     if let Some(peek) = peeked {
                         zero_extend_tid = peek.check_for_zero_extension(
                             output_value.name.clone(),
@@ -211,6 +215,7 @@ impl Expression {
                 }
             }
         }
+        
         self.replace_input_sub_register(register_map);
         // based on the zero extension and base register output, either piece the subpieces together,
         // zero extend the expression or do nothing (e.g. if output is a virtual register, no further actions should be taken)
@@ -255,6 +260,7 @@ impl Expression {
             Expression::Var(variable) => {
                 if let Some(register) = register_map.get(&variable.name) {
                     if variable.name != *register.base_register {
+                        // this functions directly changes self
                         self.create_subpiece_from_sub_register(
                             register.base_register.clone(),
                             register.size,

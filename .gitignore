@@ -275,3 +275,5 @@ PcodeExtractor/.vscode/*
 # playground
 /playground/
 /test/
+/.vscode/
+.gdb_history

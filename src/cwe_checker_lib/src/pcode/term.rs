@@ -446,69 +446,35 @@ impl Project {
                     match &mut def.term {
                         IrDef::Assign { var, value } => {
                             if let Some(zero_tid) = value
-                                .cast_sub_registers_to_base_register_subpieces(
-                                    Some(var),
-                                    &register_map,
-                                    peeked_def,
-                                )
-                            {
+                                .cast_sub_registers_to_base_register_subpieces(Some(var), &register_map, peeked_def) {
                                 zero_extend_tids.insert(zero_tid);
                             }
                         }
                         IrDef::Load { var, address } => {
                             if let Some(zero_tid) = address
-                                .cast_sub_registers_to_base_register_subpieces(
-                                    Some(var),
-                                    &register_map,
-                                    peeked_def,
-                                )
-                            {
+                                .cast_sub_registers_to_base_register_subpieces(Some(var), &register_map, peeked_def) {
                                 zero_extend_tids.insert(zero_tid);
                             }
                         }
                         IrDef::Store { address, value } => {
-                            address.cast_sub_registers_to_base_register_subpieces(
-                                None,
-                                &register_map,
-                                peeked_def,
-                            );
-                            value.cast_sub_registers_to_base_register_subpieces(
-                                None,
-                                &register_map,
-                                peeked_def,
-                            );
+                            address.cast_sub_registers_to_base_register_subpieces(None, &register_map, peeked_def);
+                            value.cast_sub_registers_to_base_register_subpieces(None, &register_map, peeked_def);
                         }
                     }
                 }
                 for jmp in blk.term.jmps.iter_mut() {
                     match &mut jmp.term {
                         IrJmp::BranchInd(dest) => {
-                            dest.cast_sub_registers_to_base_register_subpieces(
-                                None,
-                                &register_map,
-                                None,
-                            );
+                            dest.cast_sub_registers_to_base_register_subpieces(None, &register_map, None);
                         }
                         IrJmp::CBranch { condition, .. } => {
-                            condition.cast_sub_registers_to_base_register_subpieces(
-                                None,
-                                &register_map,
-                                None,
-                            );
+                            condition.cast_sub_registers_to_base_register_subpieces(None, &register_map, None);
                         }
                         IrJmp::CallInd { target, .. } => {
-                            target.cast_sub_registers_to_base_register_subpieces(
-                                None,
-                                &register_map,
-                                None,
-                            );
+                            target.cast_sub_registers_to_base_register_subpieces(None, &register_map, None);
                         }
                         IrJmp::Return(dest) => {
-                            dest.cast_sub_registers_to_base_register_subpieces(
-                                None,
-                                &register_map,
-                                None,
-                            );
+                            dest.cast_sub_registers_to_base_register_subpieces(None, &register_map, None);
                         }
                         _ => (),
                     }
