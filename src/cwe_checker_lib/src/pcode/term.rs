@@ -1,4 +1,4 @@
-use std::collections::{HashMap, HashSet};
+use std::{collections::{HashMap, HashSet}};
 
 use super::{Expression, ExpressionType, RegisterProperties, Variable};
 use crate::intermediate_representation::Arg as IrArg;
@@ -211,6 +211,21 @@ impl From<Blk> for IrBlk {
     }
 }
 
+macro_rules! format_implicit_ram_access {
+    ($formatted_defs:expr, $cur_input:expr, $formatted_input:expr, $target_reg:expr, $tid:expr, $tid_suffix:expr) => {
+        if let Some(input) = &$cur_input {
+            if input.address.is_some() {
+                let load_def = input.to_load_def($target_reg);
+                $formatted_input = load_def.lhs.clone();
+                $formatted_defs.push(Term {
+                    tid: $tid.clone().with_id_suffix($tid_suffix),
+                    term: load_def,
+                });
+            }
+        }
+    };
+}
+
 impl Blk {
     /// Add `LOAD` instructions for implicit memory accesses
     /// to convert them to explicit memory accesses.
@@ -221,36 +236,9 @@ impl Blk {
         let mut refactored_defs = Vec::new();
         for def in self.defs.iter() {
             let mut cleaned_def = def.clone();
-            if let Some(input) = &def.term.rhs.input0 {
-                if input.address.is_some() {
-                    let load_def = input.to_load_def("$load_temp0");
-                    cleaned_def.term.rhs.input0 = load_def.lhs.clone();
-                    refactored_defs.push(Term {
-                        tid: def.tid.clone().with_id_suffix("_load0"),
-                        term: load_def,
-                    });
-                }
-            }
-            if let Some(input) = &def.term.rhs.input1 {
-                if input.address.is_some() {
-                    let load_def = input.to_load_def("$load_temp1");
-                    cleaned_def.term.rhs.input1 = load_def.lhs.clone();
-                    refactored_defs.push(Term {
-                        tid: def.tid.clone().with_id_suffix("_load1"),
-                        term: load_def,
-                    });
-                }
-            }
-            if let Some(input) = &def.term.rhs.input2 {
-                if input.address.is_some() {
-                    let load_def = input.to_load_def("$load_temp2");
-                    cleaned_def.term.rhs.input2 = load_def.lhs.clone();
-                    refactored_defs.push(Term {
-                        tid: def.tid.clone().with_id_suffix("_load2"),
-                        term: load_def,
-                    });
-                }
-            }
+            format_implicit_ram_access!(refactored_defs, def.term.rhs.input0, cleaned_def.term.rhs.input0, "$load_temp0", def.tid, "_load0");
+            format_implicit_ram_access!(refactored_defs, def.term.rhs.input1, cleaned_def.term.rhs.input1, "$load_temp1", def.tid, "_load1");
+            format_implicit_ram_access!(refactored_defs, def.term.rhs.input2, cleaned_def.term.rhs.input2, "$load_temp2", def.tid, "_load2");
             refactored_defs.push(cleaned_def);
         }
         self.defs = refactored_defs;
@@ -529,4 +517,20 @@ impl Project {
 }
 
 #[cfg(test)]
-mod tests;
+mod tests {
+    use crate::pcode::Project;
+
+    #[test]
+    pub fn test_add_load_defs_for_implicit_ram_access() {
+        let file = std::fs::File::open("/Users/ctsinon/Projects/KeenTeam/cwe_checker/cwe_checker_for_learn/playground/implict_mem_pcode.json").expect("Could not open FIFO.");
+
+        let mut project_pcode: Project = serde_json::from_reader(std::io::BufReader::new(file)).unwrap();
+
+        let sub = project_pcode.program.term.subs.get_mut(0).unwrap();
+        let bb = sub.term.blocks.get_mut(0).unwrap();
+
+        println!("before: \n{:#?}", bb.term);
+        bb.term.add_load_defs_for_implicit_ram_access();
+        println!("after: \n{:#?}", bb.term);
+    }
+}

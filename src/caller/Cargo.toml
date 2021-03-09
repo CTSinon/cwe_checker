@@ -1,5 +1,3 @@
-build = "build.rs"
-
 [build-dependencies]
 mml = { git = "https://github.com/etaloof/ml" }
 
